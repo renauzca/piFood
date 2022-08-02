@@ -1,0 +1,17 @@
+.navBar {
+    padding: 2rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botones{
+    margin-right: 2rem;
+}
+
+.h3{
+    color: aliceblue;
+} 
+
+

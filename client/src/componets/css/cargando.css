@@ -1,0 +1,8 @@
+.imagenXd{
+    background-image: url('./img.PNG');
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+    height: 100vh;
+
+}
