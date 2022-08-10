@@ -32,7 +32,12 @@ module.exports = (sequelize) => {
     dishTypes:{
       type: DataTypes.TEXT,
       
-    }
+    },
+    createForMe:{
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true
+    },
 
   },
   {timestamps: false});

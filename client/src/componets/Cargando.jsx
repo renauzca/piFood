@@ -1,10 +1,12 @@
 import React from "react";
+import "./css/cargando.css"
 
 export default function Cargando(){
     return (
-        <div>
-            <div className="imagenXd">
-            Cargando
+        <div  className="imagenXd">
+            <div>
+                <h1>Cargando</h1>
+            
             </div>
         </div>
     

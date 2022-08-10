@@ -73,13 +73,18 @@ form{
 }
 
 .dietaSeleccionada{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
    
 }
 
 .pSeleccionada{
-    display: flex;
-    align-items: center;
+    display:inline-block;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
 }

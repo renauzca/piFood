@@ -9,3 +9,10 @@
         margin: 5px;
     }
     
+    .actual{
+        background-color: orange;
+    }
+
+    .reset{
+        background-color: brown;
+    }

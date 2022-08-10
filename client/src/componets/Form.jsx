@@ -28,11 +28,15 @@ export default function Form() {
     caracteresEs: /[\[\\\^\$\.\|\?\*\+\(\)\{\}]/g, //eslint-disable-line
     url: /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi, //eslint-disable-line
     instru: /^[a-zA-Z0-9_-\s]{4,200}$/, //eslint-disable-line
+    numPosi :/^(0*[1-9][0-9]*(\.[0-9]*)?|0*\.[0-9]*[1-9][0-9]*)$/gm
   };
 
   const valadationName = ( name ) => {
     if (name.length <= 4) {
       return "Por lo menos debe ingresar 5 letras";
+    }
+    if(name.length >= 50){
+      return "Nombre muy largo, resumelo un poco"
     }
     if (expresiones.caracteresEs.test(name)) {
       return "no pueden haber caracteres especiales";
@@ -49,12 +53,18 @@ export default function Form() {
   };
 
   const validationHS = (healthScore ) => {
+    if(!expresiones.numPosi.test(healthScore)){
+      return "solo se permiten numeros"
+    }
     if (healthScore <= 1) {
       return "El nivel de comida saludable debe ser mayor a 1";
     }
   };
 
   const validationSummary = (summary ) => {
+    if(summary.length >= 200){
+      return "muy largo tu summary"
+    }
     if (expresiones.caracteresEs.test(summary)) {
       return "no pueden haber caracteres especiales";
     }
@@ -64,6 +74,9 @@ export default function Form() {
   };
 
   const validationInstructions = (instructions ) => {
+    if(instructions.length>= 250){
+      return "son muchos pasos"
+    }
     if (!expresiones.instru.test(instructions)) {
       return "Minimo 4 caracteres y solo se acepta Letras, numeros, guion y guion_bajo";
     }
@@ -233,10 +246,11 @@ export default function Form() {
 
           <h2 className="name">Elige la dieta de tu plato</h2>
           <select onChange={(e) => handlerSelectDiets(e)}>
-            <option disabled="disabled" selected="selected">
+            <option  selected="selected">
               -- Opciones: --
             </option>
             {stateDiets.map((e) => {
+               if(!estadoG.typeDiets.includes(e))
               return (
                 <option key={e} value={e}>
                   {" "}

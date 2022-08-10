@@ -13,7 +13,7 @@ export default function ErrorSerchBar({ errorSerchBar }) {
   return (
     <div className="fondoErrorSerchBar">
       <div>
-        <h2 className="error404">ERROR 404, BUSQUE BIEN PAPITO</h2>
+        <h2 className="error404">ERROR 404, REALICE SU BUSQUEDA NUEVAMENTE</h2>
         <button onClick={handlerBoton}> intentar nuevamente</button>
       </div>
     </div>

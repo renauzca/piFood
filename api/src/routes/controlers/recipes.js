@@ -8,7 +8,7 @@ const allOrQuery = async (req, res) => {
   try {
     const name = req.query.name;
     const allRecipes = await mix();
-    if (name) {
+    if(name) {
       const results = allRecipes.filter((receta) => receta.name.toLowerCase().includes(name.toLowerCase()));
       results.length? 
       res.status(200).send(results) :
@@ -29,7 +29,7 @@ const getById = async (req, res) => {
   if (b) {
      res.send(b) 
   } else{
-    res.status(404).send("error al filtrar por id")
+    res.send("error al filtrar por id")
   }
 };
 

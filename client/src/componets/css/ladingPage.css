@@ -1,5 +1,5 @@
 .fondoLanding{
-    background-image:linear-gradient(to bottom, #2b2b2b41 50%, #0000005f 95%), url("../imgs/definitivo.jpg");
+    background-image:url('../videos/landing.gif');
     background-position: center;
     background-size: cover;
     object-fit: contain;
@@ -15,7 +15,7 @@
 
 }
 
-.welcome{
+/* .welcome{
     display: flex;
     margin-left: 5%;
     margin-top: -40rem;
@@ -118,4 +118,4 @@ transition-delay: 0.75s;
     border: none;
     background-color: transparent;
     font-family: fantasy;
-}
+} */
