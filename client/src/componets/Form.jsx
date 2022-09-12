@@ -164,12 +164,13 @@ export default function Form() {
         <button>Home</button>
       </Link>
 
-      <div className="titulo">
-        <h1>Crea tu receta favorita</h1>
-      </div>
+      {/* <div className="titulo">
+        <h1 className="titulo">Crea tu receta favorita</h1>
+      </div> */}
 
       <div className="campos">
         <form onSubmit={(e) => handlerBoton(e)}>
+          <div>
           <h2 className="name">Name</h2>
           <input
             className="barra"
@@ -183,7 +184,10 @@ export default function Form() {
             autoComplete="off"
           />
           {estadoG.name ? <p>{errorMsgName}</p> : ""}
+          </div>
+          
 
+          <div>
           <h2 className="name">img</h2>
           <input
             className="barra"
@@ -196,7 +200,9 @@ export default function Form() {
             autoComplete="off"
           />
           {estadoG.image ? <p>{errorMsgImage}</p> : ""}
+          </div>
 
+          <div>
           <h2 className="name">Health score</h2>
           <input
             type="range"
@@ -213,7 +219,8 @@ export default function Form() {
           <p>{estadoG.healthScore}</p>
 
           {estadoG.healthScore ? <p>{errorMsgHS}</p> : ""}
-
+          </div>
+  
           <div className="escritura">
             <h2 className="name">Summary</h2>
             <textarea
@@ -244,6 +251,8 @@ export default function Form() {
             {estadoG.instructions ? <p>{errorMsgInstructions}</p> : ""}
           </div>
 
+
+          <div>
           <h2 className="name">Elige la dieta de tu plato</h2>
           <select onChange={(e) => handlerSelectDiets(e)}>
             <option  selected="selected">
@@ -261,6 +270,9 @@ export default function Form() {
           </select>
 
           {estadoG.typeDiets? <p>{errorMsgDiets}</p> : ""}
+          </div>
+
+          
 
           <div className="dietaSeleccionada">
             <p className="pSeleccionada">
@@ -278,7 +290,6 @@ export default function Form() {
               })}{" "}
             </p>
           </div>
-
           <button type="submit" disabled={validacionBoton}>Create</button>
         </form>
       </div>

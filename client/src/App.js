@@ -8,6 +8,7 @@ import Detail from './componets/Detail';
 import Error from './componets/Error';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -18,11 +19,6 @@ function App() {
           <Route path="/home" component={Home}/>
           <Route path="/create" component={Form}/>
           <Route path="*" component={Error}/>
-         
-          {/* <Route
-            path="/recipes/:id"
-            render={({ match }) => <Detail recip={match.params.id} />}
-          ></Route> */}
       </Switch>
 
       

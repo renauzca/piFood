@@ -10,15 +10,15 @@ export default function SerchBar({ setCurrentPage, setOrder }) {
 
   const handleName = (e) => {
     e.preventDefault();
-    if(search.length <= 0){
-      alert("debes escribir algo para buscar ")
-    } else{
+    if (search.length <= 0) {
+      alert("debes escribir algo para buscar ");
+    } else {
       dispatch(getQuery(search));
       setCurrentPage(1);
       setOrder(`order${e.target.value}`);
-      setSearch("") 
+      setSearch("");
     }
-    setSearch("")
+    setSearch("");
   };
 
   const handlerSerch = (e) => {
@@ -34,7 +34,7 @@ export default function SerchBar({ setCurrentPage, setOrder }) {
         placeholder="Busca tu receta favorita"
         onChange={(e) => handlerSerch(e)}
       />
-      <button className="cursor" type="submit"  onClick={(e) => handleName(e)} >
+      <button className="cursor" type="submit" onClick={(e) => handleName(e)}>
         Buscar
       </button>
     </div>

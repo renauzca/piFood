@@ -1,5 +1,4 @@
 
-
     .paginado{
     
         display: flex;
@@ -14,5 +13,5 @@
     }
 
     .reset{
-        background-color: brown;
+        background-color: #014763;
     }

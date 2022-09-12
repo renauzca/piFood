@@ -1,17 +1,16 @@
 .detailFondoAll{
-    background:linear-gradient(to bottom, #2b2b2b41 50%, #0000005f 95%), url("../imgs/detailFondo.jpg");
     background-size: cover;
     object-fit: contain;
-    overflow-y: scroll;
     background-position: center;
     background-size: cover;
     object-fit: contain;   
     background-attachment: scroll;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    background-repeat: no-repeat;
     align-items: center;
 }
 
@@ -25,6 +24,8 @@
     border-radius: 16px;
     backdrop-filter: blur(6px);
     padding: 20px;
+    width: 70%;
+    margin-top: 60px;
 
 }
 

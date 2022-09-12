@@ -5,7 +5,7 @@
 
 .xdx{
     
-    background: url("../imgs/fondeDefinitoCocina.jpg");
+    background:white;
     background-size: cover;
     object-fit: contain;
     overflow-y: scroll;
@@ -24,25 +24,23 @@
 
 .titulo{
 width: 800px;
-background-color: black;
 margin: auto;
-color: #ffffff;
-padding: 10px 0px 10px 0px;
-text-align: center;
-border-radius: 15px 15px 0px 0px;
+color: black;
+margin-left: 1px;
+font-size: 50px;
+
+
 }
 
 
 .campos{
     background-color: rgb(0, 0, 0, 0.6);
-    width: 800px;
-    margin: auto;
+    width: 80%;
+    margin-right: -62px;
 
 }
 
-form{
-    padding: 10px;
-}
+
 
 #celdaName{
     width: 100%;
@@ -87,4 +85,9 @@ form{
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
+}
+
+
+.envueltoName{
+    width: 50px;
 }

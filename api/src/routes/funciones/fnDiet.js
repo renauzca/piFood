@@ -5,6 +5,7 @@ const { mix } = require("../funciones/fnRecipe");
 
 const getAllDiets = async (req, res) => {
   const recipes = await mix();
+ // console.log(recipes);
   const diets = recipes.map((el) => el.typeDiets);
 
   diets.map((el) => {
