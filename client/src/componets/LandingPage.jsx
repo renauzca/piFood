@@ -12,7 +12,7 @@ export default function LandingPage() {
             <span id="span2"></span>
             <span id="span3"></span>
             <span id="span4"></span>
-            <button className="botonIngresar">Ingresar</button>
+            <button className="botonIngresar">Enter</button>
           </Link>
         </div>
       </div>

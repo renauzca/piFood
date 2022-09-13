@@ -5,7 +5,7 @@ export default function Cargando() {
   return (
     <div className="imagenXd">
       <div>
-        <h1>Cargando</h1>
+        <h1>Loading</h1>
       </div>
     </div>
   );

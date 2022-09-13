@@ -14,9 +14,9 @@ export default function ErrorSerchBar({ errorSerchBar }) {
   return (
     <div >
       <div>
-        <h2 className="error404">ERROR 404, REALICE SU BUSQUEDA NUEVAMENTE</h2>
+        <h2 className="error404">ERROR 404, Try searching again</h2>
 
-        <button onClick={handlerBoton}> intentar nuevamente</button>
+        <button onClick={handlerBoton}> Try again</button>
       </div>
     </div>
   );

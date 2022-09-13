@@ -15,8 +15,8 @@ export default function Card({ image, name, dietType, id, healthScore }) {
               return e + ", ";
             })}
           </p>
-          <h4>healthScore: </h4> <p>{healthScore}</p>
-          <Link to={`recipes/${id}`}><h3>Detalles</h3></Link>
+          <h4>HealthScore: </h4> <p>{healthScore}</p>
+          <Link to={`recipes/${id}`}><h3>Details</h3></Link>
         </div>
        
        </figure>

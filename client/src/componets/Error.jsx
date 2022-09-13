@@ -14,9 +14,9 @@ export default function Error() {
   };
   return (
     <>
-      <h2>ERROR 404 : AL ESCRIBIR TU LINK</h2>
+      <h2>ERROR 404 : Writing your link</h2>
       <Link to="/">
-        <button onClick={handlerBoton}>Volver</button>
+        <button onClick={handlerBoton}>Back</button>
       </Link>
     </>
   );

@@ -35,7 +35,7 @@ export default function Detail(props) {
                 })}
               </ul>
 
-              <h2>Type Diets:</h2>
+              <h2>Diet Type:</h2>
               <ul>
                 {detailRecipe.typeDiets?.map((e) => {
                   return <p key={e}>{e}</p>;

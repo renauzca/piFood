@@ -106,9 +106,17 @@ const Reducer = (state = incialState, action) => {
       };
 
     case GET_DIETS:
+      const arr = []
+      const dietas = action.payload
+      const e = dietas.map((elemtent) => {
+        if(!arr.includes(elemtent)){
+          arr.push(elemtent)
+        }
+      } )
+      
       return {
         ...state,
-        diets: action.payload,
+        diets: arr
       };
     case DELETE_ERROR:
       return {

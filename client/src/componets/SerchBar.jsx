@@ -11,7 +11,7 @@ export default function SerchBar({ setCurrentPage, setOrder }) {
   const handleName = (e) => {
     e.preventDefault();
     if (search.length <= 0) {
-      alert("debes escribir algo para buscar ");
+      alert("You must write something to search ");
     } else {
       dispatch(getQuery(search));
       setCurrentPage(1);
@@ -35,7 +35,7 @@ export default function SerchBar({ setCurrentPage, setOrder }) {
         onChange={(e) => handlerSerch(e)}
       />
       <button className="cursor" type="submit" onClick={(e) => handleName(e)}>
-        Buscar
+        Search
       </button>
     </div>
   );

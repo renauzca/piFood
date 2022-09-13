@@ -80,7 +80,7 @@ export default function Home() {
         {/* <BarraVideo/> */}
         <button onClick={(e) => reseteo(e)}>Reset</button>
         <Link to="/create">
-          <button>Crear receta</button>
+          <button>Create recipe</button>
         </Link>
 
         {errorSerchBar.length === 0 ? (
@@ -95,7 +95,7 @@ export default function Home() {
             onChange={(e) => handlerOrderName(e)}
           >
             <option value="DEFAULT" disabled="disabled">
-              -- Ordenar por nombres --
+              -- Sort by name --
             </option>
             <option key="67" value="asc">
               Z-A
@@ -112,13 +112,13 @@ export default function Home() {
             onChange={(e) => handlerOrderScore(e)}
           >
             <option disabled="disabled" selected="selected">
-              -- Ordenar por Health Score --
+              -- Sort by Health Score --
             </option>
             <option key="44" value="de + a -">
-              De menor a mayor
+              From lowest to highest 
             </option>
             <option key="77" value="de - a +">
-              De mayor a menor
+              From highest to lowest
             </option>
           </select>
         </div>
@@ -126,7 +126,7 @@ export default function Home() {
         <div>
           <select onChange={(e) => handlerType(e)}>
             <option disabled="disabled" selected="selected">
-              -- Buscar por dieta --
+              -- Sort by diet --
             </option>
            
             <option key="1" value="paleolithic">

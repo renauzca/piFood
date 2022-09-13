@@ -33,57 +33,57 @@ export default function Form() {
 
   const valadationName = ( name ) => {
     if (name.length <= 4) {
-      return "Por lo menos debe ingresar 5 letras";
+      return "Write at least 5 letters";
     }
     if(name.length >= 50){
-      return "Nombre muy largo, resumelo un poco"
+      return "Try with a less long name"
     }
     if (expresiones.caracteresEs.test(name)) {
-      return "no pueden haber caracteres especiales";
+      return "Not allowed special characters";
     }
     if (expresiones.numeros.test(name)) {
-      return "no pueden ser numeros";
+      return "It can't be numbers";
     }
   };
 
   const valadationImage = ( image ) => {
     if (!expresiones.url.test(image)) {
-      return "ingrese un link valido para la imagen";
+      return "Please, try with a valid link";
     }
   };
 
   const validationHS = (healthScore ) => {
     if(!expresiones.numPosi.test(healthScore)){
-      return "solo se permiten numeros"
+      return "Only numbers are allowed"
     }
     if (healthScore <= 1) {
-      return "El nivel de comida saludable debe ser mayor a 1";
+      return "The level of healthscore has to be up to 1";
     }
   };
 
   const validationSummary = (summary ) => {
     if(summary.length >= 200){
-      return "muy largo tu summary"
+      return "Too long summary"
     }
     if (expresiones.caracteresEs.test(summary)) {
-      return "no pueden haber caracteres especiales";
+      return "Not allowed special characters";
     }
     if (expresiones.numeros.test(summary)) {
-      return "no pueden haber numeros";
+      return "It can't be numbers";
     }
   };
 
   const validationInstructions = (instructions ) => {
     if(instructions.length>= 250){
-      return "son muchos pasos"
+      return "Too many steps"
     }
     if (!expresiones.instru.test(instructions)) {
-      return "Minimo 4 caracteres y solo se acepta Letras, numeros, guion y guion_bajo";
+      return "Write at least 4 characters using letters, numbers, hyphen and underscore";
     }
   };
 
   const validationDiets = (diets)=>{
-    if(diets.length < 1 ) return "minimo selecciona una dieta"
+    if(diets.length < 1 ) return "Select at least one diet"
   }
 
   const errorMsgName = valadationName(estadoG.name);
@@ -117,7 +117,7 @@ export default function Form() {
     e.preventDefault();
 
     if(validacionBoton !== undefined){
-      return alert("no no, crea bien")
+      return alert("Some errors found, try again ")
     } else{
 
       dispatch(createRecipe(estadoG));
@@ -188,7 +188,7 @@ export default function Form() {
           
 
           <div>
-          <h2 className="name">img</h2>
+          <h2 className="name">Image</h2>
           <input
             className="barra"
             name="image"
@@ -238,7 +238,7 @@ export default function Form() {
           </div>
 
           <div>
-            <h2 className="name">instructions</h2>
+            <h2 className="name">Instructions</h2>
             <textarea
               name="instructions"
               id="instructions"
@@ -253,10 +253,10 @@ export default function Form() {
 
 
           <div>
-          <h2 className="name">Elige la dieta de tu plato</h2>
+          <h2 className="name">Choose your type of diet homie</h2>
           <select onChange={(e) => handlerSelectDiets(e)}>
             <option  selected="selected">
-              -- Opciones: --
+              -- Options: --
             </option>
             {stateDiets.map((e) => {
                if(!estadoG.typeDiets.includes(e))
