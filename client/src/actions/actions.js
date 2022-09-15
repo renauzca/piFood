@@ -13,7 +13,7 @@ export const DELETE_ERROR = "DELETE_ERROR";
 
 export const getDiets = () => {
   return function (distatch) {
-    return fetch("http://localhost:3001/diets")
+    return fetch("/diets")
       .then((res) => res.json())
       .then((json) => distatch({ type: GET_DIETS, payload: json }));
   };
@@ -21,14 +21,14 @@ export const getDiets = () => {
 
 export default function getAllRecipes() {
   return async function (distatch) {
-    var json = await axios.get("http://localhost:3001/recipes");
+    var json = await axios.get("/recipes");
     return distatch({ type: GET_RECIPES, payload: json.data });
   };
 }
 
 export function getQuery(name) {
   return async function (distatch) {
-    var resul = await axios.get(`http://localhost:3001/recipes/?name=${name}`);
+    var resul = await axios.get(`/recipes/?name=${name}`);
     return distatch({ type: GET_QUERY, payload: resul.data });
   };
 }
@@ -47,14 +47,14 @@ export function orderForScore(value) {
 
 export function createRecipe(value) {
   return async function (distatch) {
-    let json = await axios.post("http://localhost:3001/recipes", value);
+    let json = await axios.post("/recipes", value);
     return json;
   };
 }
 
 export function getDetail(id) {
   return async function (distatch) {
-    let json = await axios.get(`http://localhost:3001/recipes/${id}`);
+    let json = await axios.get(`/recipes/${id}`);
     return distatch({ type: GET_DETAIL, payload: json.data });
   };
 }
