@@ -10,26 +10,24 @@ export const GET_DETAIL = "GET_DETAIL";
 export const BORRAR_DETAIL = "BORRAR_DETAIL";
 export const DELETE_ERROR = "DELETE_ERROR";
 
-
 export const getDiets = () => {
-  return function (distatch) {
-    return fetch("/diets")
-      .then((res) => res.json())
-      .then((json) => distatch({ type: GET_DIETS, payload: json }));
+  return async function (dispatch) {
+    let json = await axios.get("/diets");
+    return dispatch({ type: GET_DIETS, payload: json.data });
   };
 };
 
 export default function getAllRecipes() {
-  return async function (distatch) {
-    var json = await axios.get("/recipes");
-    return distatch({ type: GET_RECIPES, payload: json.data });
+  return async function (dispatch) {
+    let json = await axios.get("/recipes");
+    return dispatch({ type: GET_RECIPES, payload: json.data });
   };
 }
 
 export function getQuery(name) {
-  return async function (distatch) {
-    var resul = await axios.get(`/recipes/?name=${name}`);
-    return distatch({ type: GET_QUERY, payload: resul.data });
+  return async function (dispatch) {
+    let resul = await axios.get(`/recipes/?name=${name}`);
+    return dispatch({ type: GET_QUERY, payload: resul.data });
   };
 }
 
@@ -46,28 +44,27 @@ export function orderForScore(value) {
 }
 
 export function createRecipe(value) {
-  return async function (distatch) {
+  return async function (dispatch) {
     let json = await axios.post("/recipes", value);
     return json;
   };
 }
 
 export function getDetail(id) {
-  return async function (distatch) {
+  return async function (dispatch) {
     let json = await axios.get(`/recipes/${id}`);
-    return distatch({ type: GET_DETAIL, payload: json.data });
+    return dispatch({ type: GET_DETAIL, payload: json.data });
   };
 }
 
 export function borrarDetail() {
-  return function (distatch) {
-    return distatch({ type: BORRAR_DETAIL });
+  return function (dispatch) {
+    return dispatch({ type: BORRAR_DETAIL });
   };
 }
 
 export function deleteError() {
-  return function (distatch) {
-    return distatch({ type: DELETE_ERROR });
+  return function (dispatch) {
+    return dispatch({ type: DELETE_ERROR });
   };
 }
-
