@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 let sequelize = new Sequelize(
-        "postgresql://postgres:WQT1q7iej4Awi0S9NOmM@containers-us-west-136.railway.app:7644/railway",
+  "postgresql://postgres:8od0gdPGAXvH8Vyw4s7j@containers-us-west-168.railway.app:7268/railway",
         { logging: false, native: false }
       );
 
