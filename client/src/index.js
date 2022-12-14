@@ -10,7 +10,7 @@ import dotenv from "dotenv"
 import axios from 'axios';
 dotenv.config()
 
-axios.defaults.baseURL = "pifood-production.up.railway.app"
+axios.defaults.baseURL = "https://pifood-production.up.railway.app"
 
 ReactDOM.render(
   <React.StrictMode>
